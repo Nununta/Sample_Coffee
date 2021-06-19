@@ -1,0 +1,46 @@
+.cmn-title {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  color: #6d4f0a;
+  font-weight: bold;
+  font-size: 60px;
+  text-transform: capitalize;
+}
+
+.partition {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 300px;
+}
+
+.cmn-section {
+  margin-top: 20px;
+}
+
+.cmn-cont {
+  padding: 60px 16px 60px 16px;
+  margin: 0 auto;
+  text-align: center;
+  @include overTab {
+    padding: 70px 40px 80px 40px;
+  }
+}
+
+.title-cmn {
+  font-size: 2rem;
+  display: inline-block;
+  border-bottom: solid 6px #e03131;
+  margin-bottom: 70px;
+  font-weight: bold;
+  text-transform: uppercase;
+  @include overTab {
+    font-size: 2.5rem;
+  }
+}

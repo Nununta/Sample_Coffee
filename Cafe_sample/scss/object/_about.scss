@@ -1,0 +1,179 @@
+.--About {
+  background-image: url("../image/6\ endroits\ pour\ dîner\ en\ amoureux.jpeg");
+}
+
+.about-list {
+  margin-bottom: 50px;
+
+  @include overTab {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+.about-item {
+  display: flex;
+  flex-flow: column-reverse;
+  width: 100%;
+  padding: 2%;
+  line-height: 2;
+  margin-bottom: 50px;
+  @include overTab {
+    width: 45%;
+  }
+  .text {
+    .desc {
+      text-align: left;
+      padding: 10px;
+    }
+  }
+
+  //ボーダー
+  position: relative;
+  padding: 0.5em 1.5em;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: black;
+    left: 10px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: black;
+    right: 10px;
+  }
+  //ボーダーここまで
+
+  .about-title {
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .title-cmn {
+      color: maroon;
+      margin-bottom: 20px;
+      //アンダーラインについて
+      position: relative;
+      border-bottom: none;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 7px;
+        background: repeating-linear-gradient(
+          -45deg,
+          rgb(167, 129, 6),
+          rgb(43, 1, 92) 2px,
+          white 2px,
+          white 4px
+        );
+      }
+    }
+
+    .image {
+      img {
+        height: 300px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.about-btn {
+  width: 170px;
+  height: 60px;
+  line-height: 3.5;
+  display: inline-block;
+  color: cl(white);
+  border-radius: 10px;
+  background-color: #da4208;
+  text-transform: capitalize;
+
+  @include overTab {
+    background-color: initial;
+    border-radius: inherit;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      right: 0;
+      bottom: 0;
+      background: #e03131;
+      transition: all 0.3s ease;
+    }
+
+    &::before {
+      width: 2px;
+      height: 50%;
+    }
+
+    &::after {
+      width: 20%;
+      height: 2px;
+    }
+
+    &:hover::before {
+      height: 100%;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+
+    span {
+      font-size: 20px;
+      display: block;
+      max-height: 100%;
+      &:hover::before {
+        height: 100%;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+
+      &::after,
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        background: #e03131;
+        transition: all 0.3s ease;
+      }
+
+      &::before {
+        width: 2px;
+        height: 50%;
+        &:hover {
+          height: 100%;
+        }
+      }
+      &::after {
+        width: 20%;
+        height: 2px;
+        &:hover {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

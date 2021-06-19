@@ -1,0 +1,92 @@
+.special-menu {
+  background-image: url("../image/11\ Originales\ estaciones\ de\ café\ que\ querrás\ tener\ en\ tu\ casa\ y\ oficina.jpeg");
+}
+
+//スリックのCSS
+.special-item.slick-slide {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-left: 15px;
+  margin-right: 15px;
+  background: linear-gradient(#fff, #e6e6e6);
+  padding: 15px;
+  border-radius: 11px;
+  height: 500px; //追記
+  // width: percentage(250 / 1140);
+  // height: percentage(460 / 1120);
+
+  .image {
+    height: 60%;
+    text-align: center;
+    @include overTab {
+      height: 50%;
+    }
+    .menu-name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: solid 6px #e03131;
+      font-size: 20px;
+      margin: 0 15px 10px 5px;
+      //height: 70px; //追記
+      height: 25%;
+    }
+    img {
+      //height: 190px;
+      height: 75%;
+      object-fit: cover;
+    }
+  }
+  .text-match {
+    height: 40%;
+    color: #666;
+    @include overTab {
+      height: 50%;
+    }
+    .desc {
+      font-size: 16px;
+      text-align: left;
+      padding: 30px 15px 15px 15px;
+      //height: 190px; //追記
+      height: 90%;
+    }
+    .price {
+      height: 10%;
+      font-size: 15px;
+      text-align: right;
+      span {
+        color: #e03131;
+      }
+    }
+  }
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.prev-arrow {
+  left: 0;
+  z-index: 10;
+}
+.next-arrow {
+  right: 0;
+}
+
+.slide-arrow.next-arrow.slick-arrow {
+  max-width: 5%;
+  @include overTab {
+    max-width: 3%;
+  }
+}
+
+.slide-arrow.prev-arrow.slick-arrow {
+  max-width: 5%;
+  @include overTab {
+    max-width: 3%;
+  }
+}
+
+//overmobile

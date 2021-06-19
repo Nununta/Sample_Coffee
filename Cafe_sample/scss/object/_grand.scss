@@ -1,0 +1,56 @@
+//Grandmenu CSS
+.grand-menu {
+  background-image: url("../image/Unique\ Kitchen\ For\ Beginners.jpeg");
+  background-color: aliceblue;
+}
+
+.grand-list {
+  @include overTab {
+    display: flex;
+  }
+}
+
+.grand-item {
+  padding: 0 45px;
+
+  text-align: center;
+  @include overTab {
+    width: 50%;
+  }
+  &:nth-child(2) {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+
+  &:nth-child(1) {
+    @include overTab {
+      border-right: solid 1px #000;
+    }
+  }
+
+  .menu-info {
+    display: flex;
+    flex-wrap: wrap;
+    dt {
+      text-align: left;
+      width: 87%;
+      border-bottom: dotted 1px #000;
+      margin-bottom: 25px;
+      font-size: 18px;
+    }
+
+    dd {
+      width: 13%;
+      text-align: right;
+      padding-top: 8px;
+      font-size: 15px;
+    }
+  }
+
+  // .Food {
+  // }
+
+  // .Other {
+  // }
+}
